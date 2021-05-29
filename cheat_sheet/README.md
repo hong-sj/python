@@ -7,8 +7,6 @@
 ## Anaconda Distribution Starter Guide
 [다운로드](https://docs.anaconda.com/anaconda/user-guide/cheatsheet/)
 
----
-
 ## Data Wrangling with pandas Cheat Sheet
 [다운로드](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
