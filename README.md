@@ -1,4 +1,5 @@
-# < 파이썬을 이용한 인터랙티브 대시보드 만들기:  Interactive Dashboards with Plotly & Dash >
+# 파이썬을 이용한 인터랙티브 대시보드 만들기
+## Interactive Dashboards with Plotly & Dash
 
 ---
 
