@@ -1,9 +1,8 @@
-# 파이썬을 이용한 인터랙티브 대시보드 만들기
-## Interactive Dashboards with Plotly & Dash
+# 파이썬을 이용한 인터랙티브 대시보드 만들기  ## Interactive Dashboards with Plotly & Dash
 
 ---
 
-## 책소개
+## 책 소개
 파이썬(Python)을 배웠지만 '데이터 시각화'가 어려운, 혹은 '대시보드 개발'을 해보고 싶은 분들에게 적합한 책입니다. Plotly와 Dash를 이용한 그래프 구성의 기본부터 웹 대시보드 개발과 배포까지 단계별 예제를 통해 정리하였습니다.
 
 대시보드1. 국가별 매출 데이터 현황 비교  
