@@ -20,14 +20,17 @@
 1.파이썬(Python)  
   1.1. 개발환경  
   1.2. 파이썬 설치  
+  1.3 가상환경 구축  
 2. 주피터 노트북(Jupyter Notebook)  
 3. 사용 데이터 소개  
-  3.1. Sales data (매출 데이터)  
-  3.2. Public data (코로나 데이터)  
+  3.1. Sales Data (매출 데이터)  
+  3.2. Public Data (코로나19 데이터)  
 4. 책의 목표  
 
 ### 제2장. Plotly
 1. Plotly란?  
+  1.1. Plotly 입력 방식  
+  1.2. Plotly - Data 객체 입력 방식  
 2. Plotly Basic Chart  
   2.1. Bar Chart  
   2.2. Scatter & Line Chart  
@@ -63,9 +66,7 @@
   2.3. Heroku CLI 설치  
 3. Web Dashboard 배포준비  
 4. Web Dashboard 배포하기  
-  4.1. Git CMD  
-  4.2. 배포된 Dashboard 확인  
-5. 자동 모니터링 활성화  
+5. 자동 모니터링 설정  
   5.1. UptimeRobot 가입  
   5.2. 배포된 Dashboard 시간 설정  
   5.3. 설정 해제  
