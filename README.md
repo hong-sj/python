@@ -78,5 +78,12 @@
 
 ---
 
-## 실습 데이터
+## 실습 자료
+실습에 필요한 자료는 데이터, 실습 코드로 [data](https://github.com/hong-sj/python/tree/main/data), [code](https://github.com/hong-sj/python/tree/main/code) 폴더에서 다운로드할 수 있습니다.
+
+
+Sales 데이터로 구현한 대시보드는 다음과 같고, [여기](http://dashapp-sales.herokuapp.com/)에 접속하여 확인할 수 있습니다. 또는, 직접 코드를 실행하여 확인할 수 있습니다.  
+(제3장. Chap3_1_dashboard_sales)
+
+![이미지 1](https://user-images.githubusercontent.com/28096343/120424387-3325c480-c3a7-11eb-9d32-c0dd5ae59969.png)
 
