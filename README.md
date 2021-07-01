@@ -3,7 +3,8 @@
 <br><br>
 ## 구매하기
 부크크 : https://www.bookk.co.kr/book/view/111629  
-예스24 : http://www.yes24.com/Product/Goods/102267640
+예스24 : http://www.yes24.com/Product/Goods/102267640  
+알라딘 : https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=K642733272&start=pnaver_02  
 
 <br><br>
 ## 도서 정보
