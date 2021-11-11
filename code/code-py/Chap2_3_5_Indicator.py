@@ -75,7 +75,7 @@ trace = go.Indicator(mode = 'number+delta',                           # 출력 �
                                   increasing = dict(color = 'blue'),  # 증가 시 색상
                                   position = 'top'))                  # 차이값 위치 
 data = [trace]
-layout = go.Layout(title = 'Chatper 3.5 - Indicator',
+layout = go.Layout(title = 'Chapter 3.5 - Indicator',
                    paper_bgcolor = "white")                           # 배경 흰색
 fig = go.Figure(data, layout)
 fig.show()
