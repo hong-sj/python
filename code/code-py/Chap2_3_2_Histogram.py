@@ -59,7 +59,7 @@ fig.append_trace(trace[1], 1, 2) # 위치 지정: 1행 2열
 fig.append_trace(trace[2], 1, 3) # 위치 지정: 1행 3열
 fig.append_trace(trace[3], 2, 1) # 위치 지정: 2행 1열
 fig.append_trace(trace[4], 2, 2) # 위치 지정: 2행 2열
-fig.update_layout(title = 'Chatper 3.2 - Histogram')
+fig.update_layout(title = 'Chapter 3.2 - Histogram')
 fig.show()
 
 
@@ -74,7 +74,7 @@ fig.append_trace(trace0, 1, 1) # 위치 지정
 fig.append_trace(trace1, 1, 2)
 fig.append_trace(trace2, 2, 1)
 fig.append_trace(trace3, 2, 2)
-fig.update_layout(title = 'Chatper 3.2 - Histogram')
+fig.update_layout(title = 'Chapter 3.2 - Histogram')
 fig.show()
 
 
@@ -82,6 +82,6 @@ fig.show()
 trace = go.Histogram(x = df['Quantity'], cumulative_enabled = True)
 data = [trace]
 fig = go.Figure(data)
-fig.update_layout(title = 'Chatper 3.2 - Histogram (Cumulative)')
+fig.update_layout(title = 'Chapter 3.2 - Histogram (Cumulative)')
 fig.show()
 
