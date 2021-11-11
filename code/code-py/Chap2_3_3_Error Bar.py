@@ -77,7 +77,7 @@ ymax = math.ceil(df_g1['upper'].max()*1.05)
 ymin = math.ceil(df_g1['lower'].min()*0.95)
 
 # hover text 입력 -> 평균값 (하한값, 상한값)
-df_g1['text'] = (df_g1['mean']/1000).round(2).apply(lambda x: str(x)) + 'K (' +                 (df_g1['lower']/1000).round(2).apply(lambda x: str(x)) + 'K, ' +                 (df_g1['upper']/1000).round(2).apply(lambda x: str(x)) + 'K)'
+df_g1['text'] = (df_g1['mean']/1000).round(2).apply(lambda x: str(x)) + 'K (' + (df_g1['lower']/1000).round(2).apply(lambda x: str(x)) + 'K, ' + (df_g1['upper']/1000).round(2).apply(lambda x: str(x)) + 'K)'
 df_g1.head(3)
 
 # 채널 참조리스트 생성
