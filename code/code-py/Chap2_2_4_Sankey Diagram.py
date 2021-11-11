@@ -92,7 +92,7 @@ trace = go.Sankey(node = dict(label = labels,
                               value = values),
                  )
 data = [trace]
-layout = go.Layout(title = 'Chapter 2.4 - Sankey Diagram (노드 위치 조정)', font_size = 15)
+layout = go.Layout(title = 'Chapter 2.4 - Sankey Diagram', font_size = 15)
 fig = go.Figure(data, layout)
 fig.show()
 
