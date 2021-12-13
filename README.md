@@ -1,5 +1,9 @@
 # 파이썬을 이용한 인터랙티브 대시보드 만들기 <br>Interactive Dashboards with Plotly & Dash<br>
 
+### 공지
+코드에서 일부 오탈자를 발견하여 업데이트 하였습니다.
+
+
 <br><br>
 ## 구매하기
 부크크 : https://www.bookk.co.kr/book/view/111629  
