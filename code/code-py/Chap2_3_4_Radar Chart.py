@@ -49,7 +49,7 @@ trace = go.Scatterpolar(r = list(d20['Rank']),           # 평가점수
                         fill = 'toself',                 # 내부 음영
                         name = '2020')
 data = [trace]
-layout = go.Layout(title = 'Chater 3.4 - Radar Chart')
+layout = go.Layout(title = 'Chapter 3.4 - Radar Chart')
 fig = go.Figure(data, layout)
 fig.show()
 
@@ -66,7 +66,7 @@ trace = go.Scatterpolar(r = ranks,           # 평가점수
                         fill = 'toself',     # 내부 음영
                         name = '2020')
 data = [trace]
-layout = go.Layout(title = 'Chater 3.4 - Radar Chart')
+layout = go.Layout(title = 'Chapter 3.4 - Radar Chart')
 fig = go.Figure(data, layout)
 fig.show()
 
@@ -90,7 +90,7 @@ for year in years:
                                   name = year)
                  )
 data = traces
-layout = go.Layout(title = 'Chater 3.4 - Radar Chart',
+layout = go.Layout(title = 'Chapter 3.4 - Radar Chart',
                    legend_orientation = "h",            # 범주 수평 나열
                    legend = dict(x = 0.3, y = -0.1),   # 범주 위치 조정
                   )
