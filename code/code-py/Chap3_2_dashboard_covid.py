@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-### 라이브러리 호출
+# ### 라이브러리 호출
+
+# In[ ]:
+
+
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
@@ -16,9 +20,17 @@ import io       # I/O(input/output) 처리
 import base64   # decoding 처리
 
 
-### 데이터 호출
+# ### 데이터 호출
+
+# In[ ]:
+
+
 # Local 기준 - 상위 폴더로 이동 후 data 폴더로 이동
 path = '../data/'
+
+
+# In[ ]:
+
 
 # COVID-19 data
 df_cov = pd.read_csv(path + 'Public data/disease_COVID19.csv')
@@ -29,12 +41,20 @@ df_disease = pd.concat([pd.read_csv(path + 'Public data/disease_ARI.csv'),
                         pd.read_csv(path + 'Public data/disease_SP.csv')])
 
 
-### 호흡기 질환 기준
+# ### 호흡기 질환 기준
+
+# In[ ]:
+
+
 # RadioItems value's
 button = ['Acute Respiratory Infection', 'Influenza', 'Streptococcus Pneumoniae']
 
 
-### App & Layout
+# ### App & Layout
+
+# In[ ]:
+
+
 # App structure
 app = dash.Dash(__name__)
 app.title = ('Dashboard | COVID-19 & Resiratory Disease Data')
@@ -63,7 +83,8 @@ app.layout = html.Div([
                                        labelStyle={'display': 'block'})
                             ]),
                     
-                    dcc.Graph(id = 'graph', style={'width': '95%', 'margin-left': 'auto', 'margin-right': 0}),
+                    dcc.Graph(id = 'graph', style={'width': '95%', 'height': 650, 'margin-left': 'auto', 'margin-right': 0}),
+                                            # Graph 높이를 layout에서 설정하기. Callback에서 처리하면 Tab 이동시 초기화 됨
                         
                     ]),
         
@@ -91,14 +112,19 @@ app.layout = html.Div([
                                                     'textAlign': 'center', 'float':'left', 'display':'inline-block'})])        
                         ], style={'width':'75%', 'overflow': 'hidden'}),  # hidden : 영역에 맞춰 나머지는 숨김처리
                     
-                    dcc.Graph(id = 'auto', style={'width': '95%', 'margin-left':'auto', 'margin-right': 0})
+                    dcc.Graph(id = 'auto', style={'width': '95%', 'height': 650, 'margin-left':'auto', 'margin-right': 0})
+                                            # Graph 높이를 layout에서 설정하기. Callback에서 처리하면 Tab 이동시 초기화 됨
                     
                     ])
     ])
 ])
 
 
-### Tab 1 - Dashboard
+# ### Tab 1 - Dashboard
+
+# In[ ]:
+
+
 @app.callback(Output('graph', 'figure'), [Input('radio', 'value')])
 def update_radio(val):
     
@@ -118,8 +144,8 @@ def update_radio(val):
                              text=cov['distance'],
                              name=dis[i],
                              hovertemplate='<b>2020</b><br> Week: %{x}<br> Distance: %{text}<br> Confirmed: %{y:,}',
-                             #hoverlabel=dict(bgcolor='black', bordercolor='white'),
                              hoverlabel_font_color='rgb(255,255,255)',
+                             textposition='none',
                              marker_color=col[i]),
                       secondary_y=False)
 
@@ -127,8 +153,7 @@ def update_radio(val):
                                              dtick = 1, tickangle = 0),  # dtick : x 간격, tickangle : x label 각도 조절
                                 yaxis = dict(title ='Cumulative Number of Confirmed Cases',
                                              tickformat = ',', showgrid = False),
-                                legend = dict(orientation='h', yanchor='top', y=1.1, traceorder='normal'),
-                                height = 650))
+                                legend = dict(orientation='h', yanchor='top', y=1.1, traceorder='normal')))
     
     ############################################################################### Line Chart
     yr = df_disease['year'].unique().tolist()
@@ -152,7 +177,11 @@ def update_radio(val):
     return fig
 
 
-### Tab 2 - Upload
+# ### Tab 2 - Upload
+
+# In[ ]:
+
+
 def process_content(contents):
     type,data  = contents.split(',')
     decoded = base64.b64decode(data)
@@ -184,8 +213,8 @@ def update_files(content1, content2):
                              text=cov['distance'],
                              name=dis[i],
                              hovertemplate='<b>2020</b><br> Week: %{x}<br> Distance: %{text}<br> Confirmed: %{y:,}',
-                             #hoverlabel=dict(bgcolor='black', bordercolor='white'),
                              hoverlabel_font_color='rgb(255,255,255)',
+                             textposition='none',
                              marker_color=col[i]),
                       secondary_y=False)
     
@@ -193,8 +222,7 @@ def update_files(content1, content2):
                                              dtick = 1, tickangle = 0),  # dtick : x 간격, tickangle : x label 각도 조절
                                 yaxis = dict(title ='Cumulative Number of Confirmed Cases',
                                              tickformat = ',', showgrid = False),
-                                legend = dict(orientation='h', yanchor='top', y=1.1, traceorder='normal'),
-                                height = 650))
+                                legend = dict(orientation='h', yanchor='top', y=1.1, traceorder='normal')))
         
 ################################################################################ Line Chart
     if content2 != None:
@@ -226,7 +254,12 @@ def update_files(content1, content2):
     return fig
 
 
-### App Launch
+# ### App Launch
+
+# In[ ]:
+
+
 # Run App
 if __name__=='__main__':
     app.run_server(debug=False)
+
